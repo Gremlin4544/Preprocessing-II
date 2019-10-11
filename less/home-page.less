@@ -1,10 +1,23 @@
 .home {
+  @media @mobile {
+    width: 90%;
+    padding: 0 1.5rem 0 1.25rem;
+  }
 
   header {
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 0;
+    border-bottom: 2px dotted @navigation-border;
+
+    div {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      width:100%;      
+      padding-bottom:2%;
+      border-bottom:2px dotted @navigation-border;
   }
 
   .content-section {
@@ -13,11 +26,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      margin: 0;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
@@ -60,9 +79,22 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      justify-content:center;
+      align-items:center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        width:100%;
+      }
     }
   }
 
