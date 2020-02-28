@@ -1,4 +1,41 @@
 .home {
+  @media @mobile {
+    width: 90%;
+    padding: 0 1.5rem 0 1.25rem;
+  }
+
+  .hero {
+    @media @mobile {
+      margin-bottom: 3vh;
+    }
+  }
+
+  .hero-content {
+    @media @mobile {
+      margin: 3vh 0;
+    }
+  }
+
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: 2px dotted @navigation-border;
+
+    div {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      width:100%;      
+      padding-bottom:2%;
+      border-bottom:2px dotted @navigation-border;
+
+      @media @mobile {
+        padding-bottom: 0;
+      }
+    }  
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,16 +43,28 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      margin: 0;
+      padding-top: 3vh;
+      border-top: 2px dotted @navigation-border;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -27,20 +76,39 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        margin-top: 3vh;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%;
+      margin: 7% 0;
+    }
 
     img {
       border-radius: 10px;
@@ -53,9 +121,33 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+    }
+
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  .btn {
+    .button(@button-bg,  @white);
+    background-color: @button-bg;
+
+    @media @mobile {
+      font-size: 1.5rem;
+      padding: 5%;
+      width: 100%;
     }
   }
 }// home

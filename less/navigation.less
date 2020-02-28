@@ -1,1 +1,42 @@
 // Navigation Styles here
+
+
+
+h1 {
+font-size: 3rem;
+margin: 0;
+padding: 3vh 0;
+justify-content: flex-start;
+
+  @media @mobile {
+    // width: 100%;
+    // padding: 0;
+    align-content: center;
+  }
+}
+
+nav {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+
+    @media @mobile {
+      width: 100%;
+      justify-content: space-around;
+    }
+    
+
+    a {
+      text-decoration: none;
+      margin: 2%;
+      padding: 3vh 0;
+      color: black;
+
+      @media @mobile {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+    }
+}
